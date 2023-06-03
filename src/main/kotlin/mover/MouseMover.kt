@@ -5,6 +5,7 @@ import com.github.kwhat.jnativehook.keyboard.NativeKeyListener
 import java.awt.Dimension
 import java.awt.Robot
 import java.awt.Toolkit
+import kotlin.concurrent.thread
 import kotlin.system.exitProcess
 
 fun main() {
@@ -37,6 +38,7 @@ fun useless() {
     var horizontal = 0
     var vertical = 0
 
+    println(1..50000)
 
     while(1 == 1) {
         while(status == "pass") {
@@ -55,6 +57,11 @@ fun useless() {
                 if (stack % 200 == 0)
                     println("Horizontal passes: $horizontalPasses, Vertical resets: $verticalPasses, Vertical adjustments: $verticalAdjustment")
             }
+        }
+
+        while (status == "stay") {
+
+            robot.mouseMove(400, 400)
         }
 
         while(status == "square") {
@@ -108,6 +115,8 @@ class GlobalKeyListener : NativeKeyListener {
             if (status == "pass") {
                 status = "square"
             } else if (status == "square") {
+                status = "stay"
+            } else if (status == "stay") {
                 status = "pass"
             }
         }
