@@ -14,7 +14,7 @@ fun main() {
 
 }
 
-var status: String = "pass"
+var status: String = "stay"
 
 fun useless() {
     //println("Ctrl Q")
