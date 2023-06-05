@@ -2,4 +2,5 @@
 Pranker pro                                                                                                                                                                                                                                                                                                                                                                
 make friends bery mad, software inc.
 
-change batch filename to 'useless' to silent launch 
+will make optimized with other lock options
+also make imput record/emulator for funzies john
